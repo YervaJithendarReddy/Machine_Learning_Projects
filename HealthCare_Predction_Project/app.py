@@ -2,10 +2,9 @@ import streamlit as st
 import pandas as pd
 import pickle
 from sklearn.linear_model import LogisticRegression
-import os
 
-model_path = os.path.join(os.path.dirname(__file__), "logistic_regression_model_health.pkl")
-with open(model_path, "rb") as file:
+
+with open("logistic_regression_model_health.pkl", "rb") as file:
     model = pickle.load(file)
 
 
